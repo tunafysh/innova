@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Nanum_Gothic } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import ModeToggle from "@/components/modetoggle";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Nanum_Gothic({
+  subsets: ["latin"],
+  weight: ["400", "700"],});
 
 export const metadata: Metadata = {
   title: "Innova Creative Studio",
