@@ -1,10 +1,10 @@
 "use client"
 import { AnimatedTooltip } from "@/components/animated-tooltip";
 import ModeToggle from "@/components/modetoggle";
-import { TracingBeam } from "@/components/tracing-beam";
 import Blob from "@/components/blob";
 import { toast, Toaster } from "sonner";
 import { useRef, useEffect } from "react";
+import { motion } from "framer-motion";
 export default function Home() {
   const blobref = useRef(null);
   const paragraphref = useRef(null);
@@ -52,10 +52,11 @@ export default function Home() {
       <br />
       {/*border*/}
       <br />
-      
-      <p ref={paragraphref} className="pl-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam interdum metus id sapien suscipit, a vulputate massa fringilla. Nunc quis justo id nibh placerat lacinia. Vivamus pretium risus purus, in hendrerit justo ultricies quis. Praesent sed vehicula erat, id ultricies nibh. Suspendisse lobortis odio libero. Sed in massa ut sapien porta ultrices. Mauris at nisi imperdiet, luctus nulla quis, rhoncus massa. Donec non ligula urna. Quisque nisl purus, scelerisque in sodales vitae, porta et nibh. Curabitur velit est, pulvinar porta eros id, luctus ornare eros. Mauris mattis elit at quam faucibus scelerisque. Duis in interdum metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+      <motion.p className="pl-6  border-accentcolor" whileHover={{ 
+        boxShadow: "-5px 0px 0px 0px #6772E4"
+      }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam interdum metus id sapien suscipit, a vulputate massa fringilla. Nunc quis justo id nibh placerat lacinia. Vivamus pretium risus purus, in hendrerit justo ultricies quis. Praesent sed vehicula erat, id ultricies nibh. Suspendisse lobortis odio libero. Sed in massa ut sapien porta ultrices. Mauris at nisi imperdiet, luctus nulla quis, rhoncus massa. Donec non ligula urna. Quisque nisl purus, scelerisque in sodales vitae, porta et nibh. Curabitur velit est, pulvinar porta eros id, luctus ornare eros. Mauris mattis elit at quam faucibus scelerisque. Duis in interdum metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
 
-<br /> <br />Maecenas malesuada lectus at tellus laoreet laoreet eu vel purus. Donec tempus eget dolor at gravida. Donec in urna a ex consectetur ultricies non sed arcu. Suspendisse luctus placerat magna, ut sagittis ex pharetra a. Phasellus scelerisque molestie porta. Aliquam tincidunt eros vitae maximus maximus. Integer nec accumsan nulla, a convallis eros. Nam mattis diam eu libero tristique laoreet. Curabitur porta sapien eu metus suscipit, a elementum massa tempus. Phasellus enim nisi, suscipit sit amet mollis id, aliquam aliquam eros. Suspendisse et justo dapibus, facilisis libero in, luctus ipsum. Ut convallis urna odio, ac lacinia risus ultricies et. Pellentesque leo ex, dapibus eget imperdiet in, facilisis non nulla. Quisque eu urna scelerisque, eleifend mi quis, lacinia odio. Etiam et ipsum lorem.</p>
+<br /> <br />Maecenas malesuada lectus at tellus laoreet laoreet eu vel purus. Donec tempus eget dolor at gravida. Donec in urna a ex consectetur ultricies non sed arcu. Suspendisse luctus placerat magna, ut sagittis ex pharetra a. Phasellus scelerisque molestie porta. Aliquam tincidunt eros vitae maximus maximus. Integer nec accumsan nulla, a convallis eros. Nam mattis diam eu libero tristique laoreet. Curabitur porta sapien eu metus suscipit, a elementum massa tempus. Phasellus enim nisi, suscipit sit amet mollis id, aliquam aliquam eros. Suspendisse et justo dapibus, facilisis libero in, luctus ipsum. Ut convallis urna odio, ac lacinia risus ultricies et. Pellentesque leo ex, dapibus eget imperdiet in, facilisis non nulla. Quisque eu urna scelerisque, eleifend mi quis, lacinia odio. Etiam et ipsum lorem.</motion.p>
 
       </div>
 
@@ -95,7 +96,7 @@ export default function Home() {
         <h1 className="text-center w-full font-bold text-5xl">Sponzorët</h1>
         <br /><br />
 
-       
+          <h1 className="text-center w-full font-bold text-5xl">Duke u konstruktuar</h1>
 
         </div>
 

@@ -4,9 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import ModeToggle from "@/components/modetoggle";
 
-const inter = Nanum_Gothic({
-  subsets: ["latin"],
-  weight: ["400", "700"],});
+const inter = Inter({
+  subsets: ["latin"]});
 
 export const metadata: Metadata = {
   title: "Innova Creative Studio",
