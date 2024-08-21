@@ -8,8 +8,8 @@ const inter = Inter({
   subsets: ["latin"]});
 
 export const metadata: Metadata = {
-  title: "Innova Creative Studio",
-  description: "Uebfaqja zyrtare për Innova Creative Studio",
+  title: "Innova Studio",
+  description: "Uebfaqja zyrtare për Innova Studio",
 };
 
 export default function RootLayout({

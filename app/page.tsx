@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client"
 import { AnimatedTooltip } from "@/components/animated-tooltip";
 import ModeToggle from "@/components/modetoggle";
@@ -5,6 +6,8 @@ import Blob from "@/components/blob";
 import { toast, Toaster } from "sonner";
 import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
+import { FocusCards, Card } from "@/components/focus-cards";
+import { title } from "process";
 export default function Home() {
   const blobref = useRef(null);
   const paragraphref = useRef(null);
@@ -33,6 +36,20 @@ export default function Home() {
       }
     };
   }, []);
+
+  const cards =[{
+    title: "Shilte Tradicionale",
+    src: "https://images.unsplash.com/photo-1518710843675-2540dd79065c?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    // src: "/placeholder.jpeg",
+    color: "#FF0000"
+  },
+  {
+    title: "Stevia",
+    src: "https://images.unsplash.com/photo-1600271772470-bd22a42787b3?q=80&w=3072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    // src: "/placeholder.jpeg",
+    color: "#00FF00"
+  },
+]
   
    return (
     <main className="h-full overflow-hidden">
@@ -93,10 +110,10 @@ export default function Home() {
         <hr />
 
         <div className="p-12 mt-16 mb-[4%] mx-[20vw] rounded h-[70vh] ">
-        <h1 className="text-center w-full font-bold text-5xl">Sponzorët</h1>
+        <h1 className="text-center w-full font-bold text-5xl">Klient</h1>
         <br /><br />
 
-          <h1 className="text-center w-full font-bold text-5xl">Duke u konstruktuar</h1>
+          <FocusCards cards={cards} />
 
         </div>
 
@@ -105,7 +122,7 @@ export default function Home() {
         <footer className="bg-accentcolor h-14">
           <center>
             <p className="text-white p-4 text-center">
-            Copyright © 2024 Innova Creative Studio
+            Copyright © 2024 Innova Studio
             </p>
           </center>
         </footer>
